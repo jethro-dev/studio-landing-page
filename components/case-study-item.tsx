@@ -1,38 +1,9 @@
-import React from "react";
-import { Button } from "./ui/button";
-import Link from "next/link";
 import Image from "next/image";
-import { projects } from "@/data";
-import { CaseStudyItem } from "./case-study-item";
+import React from "react";
 
 type Props = {};
 
-const CaseStudy = (props: Props) => {
-  return (
-    <div className="relative pb-4 pt-10 md:pt-16">
-      <div className="mx-auto container px-4 pb-16 md:pb-28">
-        <h2 className="text-5xl font-semibold">
-          Our <br className="hidden-mobile" />
-          Case Study
-        </h2>
-
-        <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-y-20 gap-x-8 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-          {projects.map((item, key) => (
-            <CaseStudyItem key={key} {...item} />
-          ))}
-        </div>
-
-        <div className="text-center mt-16">
-          <Button className="font-workSans" size={"lg"} asChild>
-            <Link href="/case-study">View All</Link>
-          </Button>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-const Article = ({
+export const CaseStudyItem = ({
   title,
   name,
   image,
@@ -84,5 +55,3 @@ const Article = ({
     </article>
   );
 };
-
-export default CaseStudy;

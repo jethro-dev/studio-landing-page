@@ -1,0 +1,23 @@
+import { CaseStudyItem } from "@/components/case-study-item";
+import HeaderSection from "@/components/header-section";
+import { projects } from "@/data";
+import React from "react";
+
+type Props = {};
+
+const CaseStudyPage = (props: Props) => {
+  return (
+    <main>
+      <HeaderSection />
+      <div className="mx-auto container px-6 pb-16 md:pb-28">
+        <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-y-20 gap-x-8 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+          {projects.map((item, key) => (
+            <CaseStudyItem key={key} {...item} />
+          ))}
+        </div>
+      </div>
+    </main>
+  );
+};
+
+export default CaseStudyPage;
