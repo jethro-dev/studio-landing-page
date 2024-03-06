@@ -2,6 +2,7 @@ import React from "react";
 import { PromoBar } from "./promo-bar";
 import Link from "next/link";
 import { Button } from "./ui/button";
+import Image from "next/image";
 
 type Props = {
   promo?: boolean;
@@ -21,14 +22,10 @@ export const Navbar = ({ promo = true }: Props) => {
       <nav className="bg-white w-full z-20 nav-sec ">
         <div className="container flex flex-wrap items-center justify-between mx-auto p-4">
           <a className="flex items-center" href="/">
-            <img
+            <Image
               alt="dstudio logo"
-              loading="lazy"
               width="120"
               height="60"
-              decoding="async"
-              data-nimg="1"
-              style={{ color: "transparent" }}
               src="https://www.dstudio.digital/logo-black.svg"
             />
           </a>
@@ -64,8 +61,8 @@ export const Navbar = ({ promo = true }: Props) => {
           </div>
           <div className="hidden items-center justify-between w-full lg:flex lg:w-auto md:order-2 lg:order-1">
             <ul className="flex flex-col lg:flex-row  gap-8 ">
-              {links.map((link) => (
-                <li>
+              {links.map((link, i) => (
+                <li key={i}>
                   <a className="font-workSans font-normal" href={link.href}>
                     {link.name}
                   </a>

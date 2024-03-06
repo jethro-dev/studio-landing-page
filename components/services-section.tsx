@@ -69,7 +69,7 @@ export const ServicesSection = (props: Props) => {
 
                 <ol className="list-none mt-10 max-w-xl text-base leading-7 lg:max-w-none">
                   {data.map((item, i) => (
-                    <li className="relative features-item">
+                    <li key={i} className="relative features-item">
                       <div className="py-2">
                         <div className="relative flex justify-between cursor-pointer">
                           <h2 className="feature-title text-black">

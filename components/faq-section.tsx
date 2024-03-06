@@ -35,8 +35,8 @@ const FaqSection = (props: Props) => {
         </h2>
 
         <div className="max-w-4xl mx-auto flex flex-col gap-6">
-          {questions.map((question) => (
-            <FaqItem {...question} />
+          {questions.map((question, i) => (
+            <FaqItem key={i} {...question} />
           ))}
         </div>
       </div>

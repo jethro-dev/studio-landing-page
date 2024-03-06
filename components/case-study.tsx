@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "./ui/button";
 import Link from "next/link";
+import Image from "next/image";
 
 type Props = {};
 
@@ -65,9 +66,11 @@ const Article = ({
     <article className="flex flex-col items-start font-sans">
       <div className="relative w-full">
         <a href="/case-study/1">
-          <img
+          <Image
             src={image}
             alt={name}
+            width={1600}
+            height={900}
             className="aspect-[16/9] w-full bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2] cursor-pointer"
           />
         </a>
