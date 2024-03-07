@@ -1,5 +1,5 @@
 import React from "react";
-import { HeaderSection } from "./_components/header-section";
+import { HeaderSection } from "@/components/header-section";
 import { LogoCarousel } from "@/components/logo-carousel";
 import StatsSection from "./_components/stats-section";
 import { TeamSection } from "./_components/team-section";
@@ -9,7 +9,10 @@ type Props = {};
 const AboutPage = (props: Props) => {
   return (
     <main>
-      <HeaderSection />
+      <HeaderSection
+        title={`About\nTeam / Office`}
+        description="We design and code user-centric digital products for enterprises and startups."
+      />
       <section className="bg-black/50 aspect-video">
         <video
           src="https://www.dstudio.digital/video/bubble-bg.mp4"
