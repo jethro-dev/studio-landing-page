@@ -21,14 +21,14 @@ export const Navbar = ({ promo = true }: Props) => {
       {/* {promo && <PromoBar />} */}
       <nav className="bg-white w-full z-20 nav-sec ">
         <div className="container flex flex-wrap items-center justify-between mx-auto p-4">
-          <a className="flex items-center" href="/">
+          <Link className="flex items-center" href="/">
             <Image
               alt="dstudio logo"
               width="120"
               height="60"
               src="https://www.dstudio.digital/logo-black.svg"
             />
-          </a>
+          </Link>
           <div className="flex md:order-2 items-center">
             <Button
               className="px-6 py-3 h-auto font-workSans text-base font-normal"
@@ -63,9 +63,9 @@ export const Navbar = ({ promo = true }: Props) => {
             <ul className="flex flex-col lg:flex-row  gap-8 ">
               {links.map((link, i) => (
                 <li key={i}>
-                  <a className="font-workSans font-normal" href={link.href}>
+                  <Link className="font-workSans font-normal" href={link.href}>
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
