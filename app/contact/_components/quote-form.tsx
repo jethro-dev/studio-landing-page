@@ -90,9 +90,9 @@ export const QuoteForm = (props: Props) => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      name: "Jethro Au",
-      email: "galongau@gmail.com",
-      message: "Hello World!",
+      name: "",
+      email: "",
+      message: "",
       services: [],
       price: undefined,
     },
