@@ -1,8 +1,11 @@
+"use client";
 import React from "react";
 import { PromoBar } from "./promo-bar";
 import Link from "next/link";
 import { Button } from "./ui/button";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
 
 type Props = {
   promo?: boolean;
@@ -16,6 +19,7 @@ const links = [
 ];
 
 export const Navbar = ({ promo = true }: Props) => {
+  const pathname = usePathname();
   return (
     <div className="sticky top-0 left-0 w-full z-30 font-sans">
       {/* {promo && <PromoBar />} */}
@@ -63,7 +67,13 @@ export const Navbar = ({ promo = true }: Props) => {
             <ul className="flex flex-col lg:flex-row  gap-8 ">
               {links.map((link, i) => (
                 <li key={i}>
-                  <Link className="font-workSans font-normal" href={link.href}>
+                  <Link
+                    className={cn(
+                      `font-workSans font-normal`,
+                      link.href === pathname && "font-semibold"
+                    )}
+                    href={link.href}
+                  >
                     {link.name}
                   </Link>
                 </li>
