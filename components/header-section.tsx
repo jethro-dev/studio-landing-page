@@ -13,7 +13,7 @@ type Props = {
 export const HeaderSection = ({ title, description }: Props) => {
   return (
     <section className="relative min-h-screen py-10 md:py-20 flex flex-col justify-center">
-      <div className="ring-1 mx-auto container px-4 pt-4">
+      <div className="mx-auto container px-4 pt-4">
         <div className="mb-8">
           <h1 className="font-semibold text-7xl xl:text-8xl">
             {/* <p className="font-neutralFace">Full - Cycle</p> */}
