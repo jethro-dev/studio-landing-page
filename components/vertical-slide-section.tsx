@@ -42,10 +42,7 @@ const VerticalSlideSection = (props: Props) => {
   });
 
   return (
-    <div
-      ref={container}
-      className="flex flex-col gap-20 items-stretch py-16 ring-1"
-    >
+    <div ref={container} className="flex flex-col gap-20 items-stretch py-16">
       {cards.map((card, i) => {
         const targetScale = 1 - (cards.length - i) * 0.05;
         return (
@@ -55,10 +52,14 @@ const VerticalSlideSection = (props: Props) => {
             index={i}
             progress={scrollYProgress}
             range={[0.25 * i, 1]}
+            opacityRange={[0.25 * i + 0.15, 0.25 * (i + 1)]}
             targetScale={targetScale}
           />
         );
       })}
+      <div className="h-screen flex items-center justify-center sticky top-0">
+        Coming soon...
+      </div>
     </div>
   );
 };
@@ -71,11 +72,13 @@ const Card = ({
   index,
   progress,
   range,
+  opacityRange,
   targetScale,
 }: {
   index: number;
   progress: MotionValue<number>;
   range: number[];
+  opacityRange: number[];
   targetScale: number;
 } & Card) => {
   const container = useRef(null);
@@ -85,8 +88,9 @@ const Card = ({
   });
 
   //   const imgScale = useTransform(scrollYProgress, [0, 1], [1.5, 1]);
-  console.log({ targetScale });
+  console.log({ targetScale, range });
   const scale = useTransform(progress, range, [1, targetScale]);
+  const opacity = useTransform(progress, opacityRange, [1, 0]);
 
   return (
     <div
@@ -95,8 +99,8 @@ const Card = ({
       style={{ top: `${index * 10}px` }}
     >
       <motion.div
-        style={{ scale }}
-        className={`relative ring-1 w-full max-w-6xl ${bgColor} rounded-lg px-12 py-16`}
+        style={{ scale, opacity }}
+        className={`relative w-full max-w-6xl bg-white rounded-lg px-12 py-16 shadow-lg border border-border`}
       >
         <div className="flex items-stretch h-full">
           <div className="basis-1/2 space-y-6">
