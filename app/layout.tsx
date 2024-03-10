@@ -32,7 +32,7 @@ const naftaLight = localFont({
 });
 
 const aesthetic = localFont({
-  src: "../public/fonts/aesthetic.otf",
+  src: "../public/fonts/Aesthetic.otf",
   display: "swap",
   variable: "--font-aesthetic",
 });
