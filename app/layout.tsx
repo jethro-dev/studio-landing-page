@@ -6,6 +6,7 @@ import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import { Toaster } from "@/components/ui/sonner";
 import { MeshDemo } from "@/components/mesh-demo";
+import SmoothScrollingWrapper from "@/components/smooth-scrolling-wrapper";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -65,7 +66,7 @@ export default function RootLayout({
       >
         <MeshDemo />
         <Navbar />
-        {children}
+        <SmoothScrollingWrapper>{children}</SmoothScrollingWrapper>
         <Footer />
         <Toaster />
       </body>
