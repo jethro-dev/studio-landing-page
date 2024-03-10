@@ -75,6 +75,14 @@ const config = {
       fontFamily: {
         inter: ["var(--font-inter)"],
         workSans: ["var(--font-work-sans)"],
+        neutralFace: ["var(--font-neutralFace)"],
+        naftaLight: ["var(--font-naftaLight)"],
+        aesthetic: ["var(--font-aesthetic)"],
+        haverbrooke: ["var(--font-haverbrooke)"],
+        anandaBlack: ["var(--font-anandaBlack)"],
+      },
+      maxWidth: {
+        "8xl": "96rem",
       },
     },
   },

@@ -9,17 +9,17 @@ export const CurvedText = (props: Props) => {
     <div className="w-fit h-fit animate-[spin_10s_linear_infinite]">
       {/* @ts-ignore */}
       <ReactCurvedText
-        width={300}
-        height={300}
-        cx={150}
-        cy={150}
-        rx={80}
-        ry={80}
+        width={80}
+        height={80}
+        cx={40}
+        cy={40}
+        rx={35}
+        ry={35}
         startOffset={50}
         reversed={false}
-        text="Design · Develop · Deliver · Design · Develop · Deliver"
+        text="Design · Develop · Deliver"
         textProps={{
-          style: { fontSize: 16, fontWeight: 600 },
+          style: { fontSize: 12, fontWeight: 400 },
         }}
         textPathProps={null}
         tspanProps={null}

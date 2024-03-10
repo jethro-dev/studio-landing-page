@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { Inter, Work_Sans } from "next/font/google";
-
+import localFont from "next/font/local";
 import "./globals.css";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import { Toaster } from "@/components/ui/sonner";
+import { MeshDemo } from "@/components/mesh-demo";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -16,6 +17,35 @@ const work_sans = Work_Sans({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-work-sans",
+});
+
+const neutralFace = localFont({
+  src: "../public/fonts/NeutralFace.otf",
+  display: "swap",
+  variable: "--font-neutralFace",
+});
+
+const naftaLight = localFont({
+  src: "../public/fonts/NaftaLight.ttf",
+  display: "swap",
+  variable: "--font-naftaLight",
+});
+
+const aesthetic = localFont({
+  src: "../public/fonts/aesthetic.otf",
+  display: "swap",
+  variable: "--font-aesthetic",
+});
+
+const haverbrooke = localFont({
+  src: "../public/fonts/Haverbrooke.ttf",
+  display: "swap",
+  variable: "--font-haverbrooke",
+});
+const anandaBlack = localFont({
+  src: "../public/fonts/AnandaBlack.ttf",
+  display: "swap",
+  variable: "--font-anandaBlack",
 });
 
 export const metadata: Metadata = {
@@ -30,7 +60,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${work_sans.variable} font-workSans`}>
+      <body
+        className={`relative ${inter.variable} ${work_sans.variable} ${neutralFace.variable} ${naftaLight.variable} ${aesthetic.variable} ${haverbrooke.variable} ${anandaBlack.variable} font-workSans`}
+      >
+        <MeshDemo />
         <Navbar />
         {children}
         <Footer />

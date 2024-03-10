@@ -68,7 +68,7 @@ const logos = [
 
 export const LogoCarousel = (props: Props) => {
   return (
-    <Marquee autoFill gradient speed={30}>
+    <Marquee autoFill gradient={false} speed={30}>
       {logos.map((logo, i) => (
         <Image
           key={i}

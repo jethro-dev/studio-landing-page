@@ -5,7 +5,7 @@ type Props = {};
 export const OurJourneySection = (props: Props) => {
   return (
     <section className="relative snap-start mt-20 mb-16">
-      <div className="mx-auto container px-4 grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div className="mx-auto container px-10 grid grid-cols-1 md:grid-cols-2 gap-10 border border-border bg-white rounded-lg p-10">
         <div>
           <h1 className="font-semibold text-8xl font-workSans">
             Our Design -
