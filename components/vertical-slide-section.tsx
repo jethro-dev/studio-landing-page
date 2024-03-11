@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import React, { useRef } from "react";
 import { Button } from "./ui/button";
 import { MotionValue, motion, useScroll, useTransform } from "framer-motion";
+import { SplineDemo } from "./spline-demo";
 
 type Props = {};
 
@@ -119,7 +120,7 @@ const Card = ({
             <motion.div
             //  style={{ scale: imgScale }}
             >
-              <video
+              {/* <video
                 src={asset}
                 playsInline
                 muted
@@ -127,7 +128,8 @@ const Card = ({
                 autoPlay
                 preload="auto"
                 className="object-cover object-bottom"
-              />
+              /> */}
+              <SplineDemo />
             </motion.div>
           </div>
         </div>

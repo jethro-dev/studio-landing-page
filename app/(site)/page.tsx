@@ -23,7 +23,12 @@ export default function Home() {
         description="We specialise in delivering ready-to-use websites, mobile applications, and comprehensive online business services."
       />
 
-      <SplineDemo />
+      {/* <div className="flex">
+        <div className="basis-1/2 ring-1"></div>
+        <div className="basis-1/2 ring-1">
+          <SplineDemo />
+        </div>
+      </div> */}
 
       {/* <ParallaxScrollDemo /> */}
       <div className="py-16">
