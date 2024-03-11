@@ -57,9 +57,9 @@ const VerticalSlideSection = (props: Props) => {
           />
         );
       })}
-      <div className="h-screen flex items-center justify-center sticky top-0">
+      {/* <div className="h-screen flex items-center justify-center sticky top-0">
         Coming soon...
-      </div>
+      </div> */}
     </div>
   );
 };

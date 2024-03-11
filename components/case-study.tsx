@@ -9,22 +9,37 @@ type Props = {};
 
 const CaseStudy = (props: Props) => {
   return (
-    <div className="relative pb-4 pt-10 md:pt-16">
-      <div className="mx-auto container px-4 pb-16 md:pb-28">
-        <h2 className="text-5xl font-semibold">
-          Our <br className="hidden-mobile" />
-          Case Study
-        </h2>
+    <div className="relative bg-black text-white pt-48 pb-24">
+      <div className="mx-auto container pb-16 md:pb-28">
+        <div className="flex gap-10">
+          <div className="basis-1/2">
+            <h2 className="text-9xl font-medium font-montserrat uppercase tracking-tight">
+              <span className="block mt-28">Our</span>
+              <span className="block pl-20 mt-4">Work</span>
+            </h2>
+          </div>
+          <div className="basis-1/2  font-montserrat">
+            <h2 className="text-6xl font-medium">
+              Making brands a damn site better.
+            </h2>
+            <p className="text-lg font-normal mt-4">
+              Let’s face it, first impressions matter. Your website’s an
+              opportunity to wow your audience, so why choose bad design? Brands
+              win over fans when they’re brave enough to go beyond their
+              creative comfort zone.
+            </p>
+          </div>
+        </div>
 
         <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-y-20 gap-x-8 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-          {projects.map((item, key) => (
-            <CaseStudyItem key={key} {...item} />
+          {projects.map((item, i) => (
+            <CaseStudyItem key={i} {...item} index={i} />
           ))}
         </div>
 
         <div className="text-center mt-16">
           <Button className="font-workSans" size={"lg"} asChild>
-            <Link href="/case-study">View All</Link>
+            <Link href="/case-study">View All Projects</Link>
           </Button>
         </div>
       </div>

@@ -1,4 +1,6 @@
+import { cn } from "@/lib/utils";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 type Props = {};
@@ -7,31 +9,47 @@ export const CaseStudyItem = ({
   title,
   name,
   image,
+  index,
 }: {
   title: string;
   name: string;
   image: string;
+  index: number;
 }) => {
   return (
-    <article className="flex flex-col items-start font-sans">
-      <div className="relative w-full">
-        <a href="/case-study/1">
+    <article
+      className={cn(
+        "flex flex-col items-start font-sans row-span-1 border border-white/[0.2] rounded-lg overflow-hidden",
+        index === 0 && "col-span-2 row-span-2"
+      )}
+    >
+      <div className="bg-black px-8 py-4">
+        <h3 className="font-medium font-montserrat">{name}</h3>
+      </div>
+      <div className="group relative w-full rounded-lg overflow-hidden">
+        <Link href="/case-study/1">
           <Image
             src={image}
             alt={name}
             width={1600}
             height={900}
-            className="aspect-[16/9] w-full bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2] cursor-pointer"
+            className="aspect-[16/9] w-full bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2] cursor-pointer pointer-events-none"
           />
-        </a>
+        </Link>
+        <div className="pointer-events-none opacity-0 group-hover:opacity-100 bg-black/50 absolute inset-0 flex items-center px-10 py-10 transition-opacity">
+          <div>
+            <p>{title}</p>
+          </div>
+          <div className="absolute bottom-10">hello baadges</div>
+        </div>
       </div>
-      <div className="w-full pointer-events-auto">
-        <p className="pt-6 text-black text-base font-normal">{name}</p>
-        <h3 className="mt-2 text-black max-w-sm text-3xl font-semibold font-workSans">
+      {/* <div className="w-full pointer-events-auto">
+        <p className="pt-6 text-white text-base font-normal">{name}</p>
+        <h3 className="mt-2 text-white max-w-sm text-3xl font-semibold font-workSans">
           {title}
         </h3>
         <a className="" href="/case-study/1">
-          <p className="group mt-5 text-lg leading-6 text-black line-clamp-3 flex font-normal">
+          <p className="group mt-5 text-lg leading-6 text-white line-clamp-3 flex font-normal">
             View case study &nbsp;
             <span className="text-base">
               <svg
@@ -51,7 +69,7 @@ export const CaseStudyItem = ({
             </span>
           </p>
         </a>
-      </div>
+      </div> */}
     </article>
   );
 };

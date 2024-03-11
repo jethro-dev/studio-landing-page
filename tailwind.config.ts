@@ -12,10 +12,10 @@ const config = {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
-      // screens: {
-      //   "2xl": "1400px",
-      // },
+      padding: "7%",
+      screens: {
+        "2xl": "1400px",
+      },
     },
     extend: {
       colors: {
@@ -75,6 +75,7 @@ const config = {
       fontFamily: {
         inter: ["var(--font-inter)"],
         workSans: ["var(--font-work-sans)"],
+        montserrat: ["var(--font-montserrat)"],
         neutralFace: ["var(--font-neutralFace)"],
         naftaLight: ["var(--font-naftaLight)"],
         aesthetic: ["var(--font-aesthetic)"],
