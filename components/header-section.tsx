@@ -5,6 +5,7 @@ import { setRandomPatterns } from "./mesh-demo";
 import { Gradient } from "@/lib/mesh-gradient";
 import { Button } from "./ui/button";
 import Spline from "@splinetool/react-spline";
+import { SplineDemo } from "./spline-demo";
 
 type Props = {
   title: string;
@@ -13,7 +14,7 @@ type Props = {
 
 export const HeaderSection = ({ title, description }: Props) => {
   return (
-    <section className="relative min-h-screen py-10 md:py-20 flex flex-col justify-center">
+    <section className="relative min-h-screen py-10 md:py-20 flex flex-col justify-center text-white">
       <div className="relative z-10 mx-auto container px-4 pt-4 mb-8 pointer-events-none">
         <h1 className="font-semibold text-7xl xl:text-8xl">
           {/* <p className="font-neutralFace">Full - Cycle</p> */}
@@ -31,8 +32,8 @@ export const HeaderSection = ({ title, description }: Props) => {
           </div>
         </div> */}
 
-      <div className="absolute inset-0 z-0">
-        <Spline scene="https://prod.spline.design/FEouEwP6PdMCPAHJ/scene.splinecode" />
+      <div className="absolute inset-0 z-0 flex itemsce justify-center">
+        <SplineDemo />
       </div>
 
       <div

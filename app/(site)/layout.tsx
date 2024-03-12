@@ -73,9 +73,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`relative ${inter.variable} ${work_sans.variable} ${neutralFace.variable} ${naftaLight.variable} ${aesthetic.variable} ${haverbrooke.variable} ${anandaBlack.variable} ${montserrat.variable} font-montserrat`}
+        className={`bg-black relative ${inter.variable} ${work_sans.variable} ${neutralFace.variable} ${naftaLight.variable} ${aesthetic.variable} ${haverbrooke.variable} ${anandaBlack.variable} ${montserrat.variable} font-montserrat`}
       >
-        <MeshDemo />
+        {/* <MeshDemo /> */}
         <Navbar />
         <SmoothScrollingWrapper>{children}</SmoothScrollingWrapper>
         <Footer />
