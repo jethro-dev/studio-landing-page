@@ -81,7 +81,7 @@ export default function RootLayout({
         <SmoothScrollingWrapper>{children}</SmoothScrollingWrapper>
         <Footer />
         <Toaster />
-        {/* <LoadingScreen /> */}
+        <LoadingScreen />
       </body>
     </html>
   );
