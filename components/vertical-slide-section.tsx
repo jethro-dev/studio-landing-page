@@ -89,7 +89,7 @@ const Card = ({
   });
 
   //   const imgScale = useTransform(scrollYProgress, [0, 1], [1.5, 1]);
-  console.log({ targetScale, range });
+  // console.log({ targetScale, range });
   const scale = useTransform(progress, range, [1, targetScale]);
   const opacity = useTransform(progress, opacityRange, [1, 0]);
 
@@ -120,7 +120,7 @@ const Card = ({
             <motion.div
             //  style={{ scale: imgScale }}
             >
-              {/* <video
+              <video
                 src={asset}
                 playsInline
                 muted
@@ -128,8 +128,7 @@ const Card = ({
                 autoPlay
                 preload="auto"
                 className="object-cover object-bottom"
-              /> */}
-              <SplineDemo />
+              />
             </motion.div>
           </div>
         </div>

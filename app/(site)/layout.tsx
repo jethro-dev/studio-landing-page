@@ -7,6 +7,7 @@ import { Navbar } from "@/components/navbar";
 import { Toaster } from "@/components/ui/sonner";
 import { MeshDemo } from "@/components/mesh-demo";
 import SmoothScrollingWrapper from "@/components/smooth-scrolling-wrapper";
+import LoadingScreen from "@/components/loading-screen";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -80,6 +81,7 @@ export default function RootLayout({
         <SmoothScrollingWrapper>{children}</SmoothScrollingWrapper>
         <Footer />
         <Toaster />
+        {/* <LoadingScreen /> */}
       </body>
     </html>
   );
