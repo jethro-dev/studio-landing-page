@@ -20,21 +20,19 @@ const questions = [
       "We provide an extensive array of services encompassing research, UI/UX design, branding, motion design, as well as frontend and backend development for mobile, web, and diverse devices. Our comprehensive offerings cater to a broad spectrum of client needs and ensure holistic solutions for their digital endeavors.",
   },
   {
-    question: "Where is DstudioAgency Located?",
+    question: "Where is Yee Studio Located?",
     answer:
-      "We have a strong presence with offices in both New Delhi, India, and Salt Lake City, Utah. Our dual locations allow us to cater to clients from diverse regions and provide localized support and expertise.",
+      "We have a strong presence with offices in London and Edinburgh. We also have office in Hong Kong. Our dual locations allow us to cater to clients from diverse regions and provide localized support and expertise.",
   },
 ];
 
 const FaqSection = (props: Props) => {
   return (
-    <section className="relative pb-16 pt-16 snap-start">
-      <div className="container px-4">
-        <h2 className="text-center max-w-xl mx-auto pb-12 font-semibold text-5xl font-workSans">
-          Frequently Asked Questions
-        </h2>
+    <section className="relative pb-16 pt-16">
+      <div className="container max-w-7xl">
+        <h2 className="text-center lg:text-7xl">Frequently Asked Questions</h2>
 
-        <div className="max-w-4xl mx-auto flex flex-col gap-6">
+        <div className="mt-20 max-w-3xl mx-auto flex flex-col gap-6">
           {questions.map((question, i) => (
             <FaqItem key={i} {...question} />
           ))}

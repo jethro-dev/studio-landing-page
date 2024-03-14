@@ -4,7 +4,7 @@ type Props = {};
 
 export function SuccessStories({}: Props) {
   return (
-    <section>
+    <section className="bg-white text-black py-40">
       <div className="container px-4">
         <h2 className="text-5xl font-semibold mb-16">
           Our Client’s Funding and
@@ -19,7 +19,7 @@ export function SuccessStories({}: Props) {
                   2 Years of Collaborations
                 </p>
                 <h3 className="text-white mt-2 line-clamp-3 text-3xl font-semibold">
-                  “Dstudio Agency has managed to submit all the deliverables on
+                  “YEE STUDIO has managed to submit all the deliverables on
                   time, which being tested before the brand’s grand launch”
                 </h3>
                 <div className="overflow-hidden mt-8 md:mb-8">

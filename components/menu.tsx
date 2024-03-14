@@ -1,7 +1,18 @@
+"use client";
 import React, { useEffect, useState } from "react";
 import { Cross as Hamburger } from "hamburger-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import { Button } from "./ui/button";
+import {
+  disableBodyScroll,
+  enableBodyScroll,
+  clearAllBodyScrollLocks,
+} from "body-scroll-lock";
+import { useLenisStateStore } from "@/hooks/use-lenis-state-store";
+import { useLenis } from "@studio-freight/react-lenis/types";
+import { useToggleScroll } from "@/hooks/use-toggle-scroll";
+
 type Props = {};
 
 const links = [
@@ -13,25 +24,30 @@ const links = [
 
 export const Menu = (props: Props) => {
   const [open, setOpen] = useState(false);
+  const { disableScroll, enableScroll } = useToggleScroll();
+  const { isScrollDisabled, setIsScrollDisabled } = useLenisStateStore(
+    (state) => state
+  );
+
+  // const lenis = useLenis(({ scroll }) => {
+  //   // called every scroll
+  // });
 
   useEffect(() => {
     if (open) {
-      document.querySelector("body")?.classList.add("noscroll");
+      disableScroll();
     } else {
-      document.querySelector("body")?.classList.remove("noscroll");
+      enableScroll();
     }
   }, [open]);
 
-  //   document
-  //     .getElementById("hamburgerMenu")
-  //     .addEventListener("click", function () {
-  //       this.classList.toggle("open");
-  //     });
-
-  //   console.log({ open });
   return (
     <>
-      <div className="absolute top-6 right-6 z-10">
+      <div
+        className={`absolute top-6 right-6 z-10 transition-all ${
+          open ? "text-black" : "text-white"
+        }`}
+      >
         <Hamburger rounded label="Show menu" toggled={open} toggle={setOpen} />
       </div>
       <AnimatePresence>
@@ -51,7 +67,7 @@ export const Menu = (props: Props) => {
               animate={{ opacity: 100, translateX: 0 }}
               exit={{ opacity: 0, translateX: -10 }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
-              className="absolute top-4 right-4 z-0 bg-white rounded-md pt-12 pb-8 px-8 max-w-sm w-screen"
+              className="absolute top-4 right-4 z-0 bg-white text-black rounded-md pt-12 pb-8 px-8 max-w-sm w-screen"
             >
               <div className="">
                 <div className="flex flex-col space-y-4">

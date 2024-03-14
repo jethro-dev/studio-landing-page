@@ -95,10 +95,7 @@ export const MeshDemo = (props: Props) => {
   };
 
   return (
-    <div
-      className="fixed top-0 -z-10 h-screen w-screen"
-      onClick={() => setRandomPatterns()}
-    >
+    <div className="absolute inset-0 top-0 -z-10">
       <motion.canvas
         id="gradient-canvas"
         data-transition-in

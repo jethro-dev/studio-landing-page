@@ -19,7 +19,7 @@ export const CurvedText = (props: Props) => {
         reversed={false}
         text="Design · Develop · Deliver"
         textProps={{
-          style: { fontSize: 12, fontWeight: 400 },
+          style: { fontSize: 12, fontWeight: 400, color: "white" },
         }}
         textPathProps={null}
         tspanProps={null}

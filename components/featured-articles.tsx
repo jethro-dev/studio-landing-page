@@ -1,7 +1,16 @@
-import React from "react";
 import { Button } from "./ui/button";
+import { client } from "@/sanity/lib/client";
+import { groq } from "next-sanity";
 
 type Props = {};
+
+type SimpleBlog = {
+  _id: string;
+  title: string;
+  categories: string[];
+  mainImage: string;
+  slug: string;
+};
 
 const articles = [
   {
@@ -10,9 +19,19 @@ const articles = [
   },
 ];
 
-export const FeaturedArticles = (props: Props) => {
+const query = groq`*[_type == 'post']{
+  _id,
+  title,
+  categories[]->{title},
+  mainImage,
+  "slug":slug.current
+}`;
+
+export const FeaturedArticles = async (props: Props) => {
+  const blogs = await client.fetch<SimpleBlog[]>(query);
+  console.log({ blogs });
   return (
-    <section className="bg-black text-white ring-1">
+    <section className="ring-1 py-40">
       <div className="container">
         <div className="flex items-center justify-between">
           <h2 className="text-7xl font-medium font-montserrat tracking-tight">
@@ -25,7 +44,12 @@ export const FeaturedArticles = (props: Props) => {
             View our blog
           </Button>
         </div>
-        <div></div>
+      </div>
+
+      <div className="container">
+        {blogs.map((blog) => (
+          <div key={blog._id}>{blog.title}</div>
+        ))}
       </div>
     </section>
   );

@@ -18,7 +18,7 @@ export const FaqItem = ({ question, answer }: Props) => {
 
   return (
     <div
-      className="border border-black rounded-[12px] cursor-pointer hover:bg-black/[.05] transition duration-300 shadow-md"
+      className="border border-white/[.2] rounded-[12px] cursor-pointer hover:bg-black/[.05] transition duration-300"
       onClick={() => setIsOpen(!isOpen)}
     >
       <div className="p-6 flex items-center justify-between">

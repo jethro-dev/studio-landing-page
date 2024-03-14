@@ -27,12 +27,15 @@ export const Navbar = ({ promo = true }: Props) => {
       <nav className="bg-transparent w-full">
         <div className="h-28 flex flex-wrap items-center justify-between mx-auto p-4">
           <Link className="flex items-center" href="/">
-            <Image
+            {/* <Image
               alt="dstudio logo"
               width="120"
               height="60"
               src="https://www.dstudio.digital/logo-black.svg"
-            />
+            /> */}
+            <span className="font-neutralFace text-3xl font-bold">
+              YEE Studio
+            </span>
           </Link>
           <div className="flex md:order-2 items-center">
             {/* <Button

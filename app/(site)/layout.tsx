@@ -7,7 +7,6 @@ import { Navbar } from "@/components/navbar";
 import { Toaster } from "@/components/ui/sonner";
 import { MeshDemo } from "@/components/mesh-demo";
 import SmoothScrollingWrapper from "@/components/smooth-scrolling-wrapper";
-import LoadingScreen from "@/components/loading-screen";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -74,14 +73,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`bg-black relative ${inter.variable} ${work_sans.variable} ${neutralFace.variable} ${naftaLight.variable} ${aesthetic.variable} ${haverbrooke.variable} ${anandaBlack.variable} ${montserrat.variable} font-montserrat`}
+        className={`bg-black relative ${inter.variable} ${work_sans.variable} ${neutralFace.variable} ${naftaLight.variable} ${aesthetic.variable} ${haverbrooke.variable} ${anandaBlack.variable} ${montserrat.variable} font-montserrat scroll-smooth`}
       >
         {/* <MeshDemo /> */}
         <Navbar />
         <SmoothScrollingWrapper>{children}</SmoothScrollingWrapper>
         <Footer />
         <Toaster />
-        <LoadingScreen />
       </body>
     </html>
   );

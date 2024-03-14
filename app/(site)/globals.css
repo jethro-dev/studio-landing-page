@@ -67,20 +67,38 @@
 }
 
 @layer base {
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #a0a0a0;
+    border-radius: 10px;
+  }
   * {
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground overscroll-none;
+    @apply bg-black text-white overscroll-none font-montserrat;
+  }
+  h2 {
+    @apply font-montserrat md:text-8xl lg:text-9xl font-medium;
+  }
+  h3 {
+    @apply font-montserrat text-5xl lg:text-6xl font-medium whitespace-pre-line;
   }
 }
 
 @layer components {
 }
+
 @layer utilities {
-  .noscroll {
-    @apply fixed overflow-y-scroll w-full;
-  }
+  /* .noscroll {
+    @apply overflow-y-hidden w-full;
+  } */
 }
 
 #gradient-canvas {

@@ -14,7 +14,7 @@ export const Footer = (props: Props) => {
           Write us on
         </h3>
         <h4 className="text-3xl md:text-7xl font-bold font-serif">
-          <a href="mailto:hello@dstudio.digital">hello@dstudio.digital</a>
+          <a href="mailto:hello@dstudio.digital">hello@yee.studio</a>
         </h4>
         <div className="pt-4 inline-block mt-14">
           <div className="inline-block">
@@ -25,34 +25,33 @@ export const Footer = (props: Props) => {
         </div>
 
         <div>
-          <hr className="my-16 border-bottom border-gray-800 border-[#1e1e1e]" />
+          <hr className="my-16 border-bottom border-[#1e1e1e]" />
         </div>
 
         <div className="grid grid-col-1 md:grid-cols-3 gap-8 lg:gap-16 font-workSans">
           <div className=" max-w-lg">
-            <div className="footer-logo">
-              <Image
+            <div className="footer-logo text-3xl font-montserrat font-semibold">
+              {/* <Image
                 alt="dstudio logo"
                 width="106"
                 height="42"
                 // style="color:transparent"
                 src="https://www.dstudio.digital/logo-white.svg"
-              />
+              /> */}
+              YEE STUDIO
             </div>
-            <div className="text-3xl font-bold mt-6">5.0</div>
-            <div className="mt-2">Rated on Clutch</div>
+            <div className="text-lg font-normal mt-6">
+              Transform visions into reality.
+            </div>
           </div>
 
           <div>
             <div className="font-semibold text-xl">Location</div>
             <div className="font-bold text-lg mt-10">United Kingdom</div>
-            <p className=" mt-3 font-normal max-w-xs">
-              Suite 55, Unit 3A 34-35, Hatton Garden, Holborn, London, EC1N 8DX
-            </p>
-            <div className="font-semibold text-lg mt-6">India</div>
-            <p className="mt-3 font-normal max-w-xs pr-16">100% Remote Team</p>
-            <div className="font-semibold text-lg mt-6">Hong Kong</div>
-            <p className="mt-3 font-normal max-w-xs pr-16">100% Remote Team</p>
+            <p className=" mt-3 font-normal max-w-xs">London</p>
+            <p className=" mt-3 font-normal max-w-xs">Edinburgh</p>
+            <div className="font-semibold text-lg mt-6">China</div>
+            <p className="mt-3 font-normal max-w-xs pr-16">Hong Kong</p>
           </div>
 
           <div>
@@ -74,15 +73,6 @@ export const Footer = (props: Props) => {
                   className="py-1 hover:text-yellow-300 block"
                 >
                   Instagram
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.behance.net/dstudioagency"
-                  target="_blank"
-                  className="py-1 hover:text-yellow-300 block"
-                >
-                  Behance
                 </a>
               </li>
               <li>
@@ -129,7 +119,7 @@ export const Footer = (props: Props) => {
             </a>
           </div>
           <div className="text-sm text-left md:text-right">
-            c 2023 Dstudio Digital - All rights Reserved
+            &copy; 2024 YEE STUDIO. All Rights Reserved.
           </div>
         </div>
       </div>

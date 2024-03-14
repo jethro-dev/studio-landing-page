@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { CurvedText } from "./curved-text";
-import { setRandomPatterns } from "./mesh-demo";
+import { MeshDemo, setRandomPatterns } from "./mesh-demo";
 import { Gradient } from "@/lib/mesh-gradient";
 import { Button } from "./ui/button";
 import Spline from "@splinetool/react-spline";
@@ -15,43 +15,38 @@ type Props = {
 export const HeaderSection = ({ title, description }: Props) => {
   return (
     <section className="relative min-h-screen py-10 md:py-20 flex flex-col justify-center text-white">
-      <div className="relative z-10 mx-auto container px-4 pt-4 mb-8 pointer-events-none">
-        <h1 className="font-semibold text-7xl xl:text-8xl">
-          {/* <p className="font-neutralFace">Full - Cycle</p> */}
-          <p className="font-anandaBlack font-bold text-9xl mb-6">Design</p>
-          <p className="text-right font-haverbrooke mb-6">Development</p>
-          <p className="font-neutralFace">Agency</p>
-        </h1>
-      </div>
-      {/* <div className="flex relative">
-       
-          <div className="flex-auto md:flex-1 pt-20">
-            <div className="ml-auto max-w-xl">
-              <p className="text-2xl font-light pb-6">{description}</p>
-            </div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0)_0%,rgba(0,0,0,.8)_100%)]"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black"></div>
+      <MeshDemo />
+
+      <div className="py-24 md:py-0 container max-w-8xl absolute inset-0 grid grid-cols-1 md:grid-cols-12 md:grid-rows-2 gap-10 z-10 font-montserrat">
+        <div className="col-span-1 md:col-span-8 row-span-2 flex items-center justify-start">
+          <h1 className="font-semibold text-6xl md:text-7xl xl:text-8xl space-y-2 md:space-y-6">
+            {/* <p className="font-neutralFace">Full - Cycle</p> */}
+            <span className="block font-montserrat uppercase">Full-Cycle</span>
+            <span className="block font-montserrat uppercase">Web</span>
+            <span className="block font-montserrat uppercase">Agency</span>
+          </h1>
+        </div>
+
+        <div className="col-span-1 md:col-span-4 flex items-end md:items-center justify-end">
+          <div className="max-w-lg">
+            <p className="uppercase text-5xl md:text-6xl font-semibold whitespace-pre-line text-right">
+              {`Vision\ninto\nReality`}
+            </p>
           </div>
-        </div> */}
+        </div>
+        <div className="col-span-1 md:col-span-4 flex items-start md:items-center justify-end ">
+          <div className="max-w-sm">
+            <p className=" text-right font-medium font-montserrat text-lg">
+              {description}
+            </p>
+          </div>
+        </div>
+      </div>
 
       <div className="absolute inset-0 z-0 flex itemsce justify-center">
         <SplineDemo />
-      </div>
-
-      <div
-        className="absolute bottom-0 left-0 flex items-end gap-4 pb-4 pl-4"
-        onClick={() => {
-          // alert("clicked");
-          const gradient = new Gradient();
-          setRandomPatterns();
-          // @ts-ignore
-          gradient.initGradient("#gradient-canvas");
-        }}
-      >
-        <CurvedText />
-        <Button variant={"ghost"} className="underline font-light">
-          Click to Dream
-        </Button>
-        {/* <CurvedText />
-          <CurvedText /> */}
       </div>
     </section>
   );
