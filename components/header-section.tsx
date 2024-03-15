@@ -14,18 +14,18 @@ type Props = {
 
 export const HeaderSection = ({ title, description }: Props) => {
   return (
-    <section className="relative min-h-screen py-10 md:py-20 flex flex-col justify-center text-white">
+    <section className="relative h-screen max-h-[1000px] py-10 md:py-20 flex flex-col justify-center text-white">
       <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0)_0%,rgba(0,0,0,.8)_100%)]"></div>
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black"></div>
       <MeshDemo />
 
       <div className="py-24 md:py-0 container max-w-8xl absolute inset-0 grid grid-cols-1 md:grid-cols-12 md:grid-rows-2 gap-10 z-10 font-montserrat">
         <div className="col-span-1 md:col-span-8 row-span-2 flex items-center justify-start">
-          <h1 className="font-semibold text-6xl md:text-7xl xl:text-8xl space-y-2 md:space-y-6">
+          <h1 className="uppercase space-y-2 md:space-y-6">
             {/* <p className="font-neutralFace">Full - Cycle</p> */}
-            <span className="block font-montserrat uppercase">Full-Cycle</span>
-            <span className="block font-montserrat uppercase">Web</span>
-            <span className="block font-montserrat uppercase">Agency</span>
+            <span className="block">Full-Cycle</span>
+            <span className="block">Web</span>
+            <span className="block">Agency</span>
           </h1>
         </div>
 

@@ -84,11 +84,20 @@
   body {
     @apply bg-black text-white overscroll-none font-montserrat;
   }
+  h1 {
+    @apply font-montserrat font-semibold text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl;
+  }
   h2 {
-    @apply font-montserrat md:text-8xl lg:text-9xl font-medium;
+    @apply font-montserrat font-medium text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl;
   }
   h3 {
-    @apply font-montserrat text-5xl lg:text-6xl font-medium whitespace-pre-line;
+    @apply font-montserrat font-semibold text-xl sm:text-4xl lg:text-5xl md:whitespace-pre-line;
+  }
+  h6 {
+    @apply font-montserrat font-medium text-sm lg:text-lg;
+  }
+  p {
+    @apply font-montserrat font-normal text-sm md:text-base lg:text-lg;
   }
 }
 

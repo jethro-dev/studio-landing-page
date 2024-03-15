@@ -24,8 +24,8 @@ export const Navbar = ({ promo = true }: Props) => {
   return (
     <div className="fixed top-0 left-0 w-full z-30 font-sans">
       {/* {promo && <PromoBar />} */}
-      <nav className="bg-transparent w-full">
-        <div className="h-28 flex flex-wrap items-center justify-between mx-auto p-4">
+      <nav className="container bg-transparent w-full">
+        <div className="h-20 flex flex-wrap items-center justify-between mx-auto ">
           <Link className="flex items-center" href="/">
             {/* <Image
               alt="dstudio logo"
@@ -37,7 +37,7 @@ export const Navbar = ({ promo = true }: Props) => {
               YEE Studio
             </span>
           </Link>
-          <div className="flex md:order-2 items-center">
+          <div className="flex md:order-2 items-center relative">
             {/* <Button
               className="px-6 py-3 h-auto font-workSans text-base font-normal"
               asChild

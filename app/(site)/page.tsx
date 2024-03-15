@@ -9,7 +9,6 @@ import { Navbar } from "@/components/navbar";
 import { OurJourneySection } from "@/components/our-journey-section";
 import OurProcess from "@/components/our-process";
 import { ParallaxScrollDemo } from "@/components/parallax-scroll-demo";
-import { ServicesSection } from "@/components/services-section";
 import { SplineDemo } from "@/components/spline-demo";
 import { SuccessStories } from "@/components/success-stories";
 import VerticalSlideSection from "@/components/vertical-slide-section";

@@ -43,11 +43,7 @@ export const Menu = (props: Props) => {
 
   return (
     <>
-      <div
-        className={`absolute top-6 right-6 z-10 transition-all ${
-          open ? "text-black" : "text-white"
-        }`}
-      >
+      <div className={`transition-all ${open ? "text-black" : "text-white"}`}>
         <Hamburger rounded label="Show menu" toggled={open} toggle={setOpen} />
       </div>
       <AnimatePresence>

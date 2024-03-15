@@ -30,9 +30,11 @@ const FaqSection = (props: Props) => {
   return (
     <section className="relative pb-16 pt-16">
       <div className="container max-w-7xl">
-        <h2 className="text-center lg:text-7xl">Frequently Asked Questions</h2>
+        <h2 className="text-center text-2xl md:text-4xl lg:text-5xl">
+          Frequently Asked Questions
+        </h2>
 
-        <div className="mt-20 max-w-3xl mx-auto flex flex-col gap-6">
+        <div className="mt-8 lg:mt-20 max-w-3xl mx-auto flex flex-col gap-3 lg:gap-6">
           {questions.map((question, i) => (
             <FaqItem key={i} {...question} />
           ))}

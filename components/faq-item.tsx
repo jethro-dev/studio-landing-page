@@ -21,14 +21,14 @@ export const FaqItem = ({ question, answer }: Props) => {
       className="border border-white/[.2] rounded-[12px] cursor-pointer hover:bg-black/[.05] transition duration-300"
       onClick={() => setIsOpen(!isOpen)}
     >
-      <div className="p-6 flex items-center justify-between">
-        <h2 className="text-lg font-medium">{question}</h2>
+      <div className="p-4 lg:p-6 flex items-center justify-between">
+        <p className="font-medium">{question}</p>
         <motion.div
           initial={{ rotate }}
           animate={{ rotate }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
         >
-          <Plus className="h-6 w-6" />
+          <Plus className="h-4 w-4 lg:h-6 lg:w-6" />
         </motion.div>
       </div>
       <motion.div
@@ -37,7 +37,7 @@ export const FaqItem = ({ question, answer }: Props) => {
         transition={{ duration: 0.5, ease: "easeInOut" }}
         className="overflow-hidden"
       >
-        <p className="px-6 pb-6 font-normal text-sm">{answer}</p>
+        <p className="px-4 lg:px-6 pb-4 lg:pb-6 font-light">{answer}</p>
       </motion.div>
     </div>
   );

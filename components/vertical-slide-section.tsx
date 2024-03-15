@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import React, { useRef } from "react";
 import { Button } from "./ui/button";
 import { MotionValue, motion, useScroll, useTransform } from "framer-motion";
+import { useWindowSize } from "usehooks-ts";
 
 type Props = {};
 
@@ -52,15 +53,28 @@ const VerticalSlideSection = (props: Props) => {
   });
 
   return (
-    <>
-      <div className="pt-40 container">
-        <h2 className="font-montserrat md:text-8xl lg:text-9xl font-medium">
+    <section className="mt-20">
+      <div className="container flex flex-col md:flex-row justify-between gap-4">
+        <h2 className="md:mt-80 md:w-1/2">
           <span className="block uppercase">Our</span>
-          <span className="block uppercase ml-40">Services</span>
+          <span className="ml-6 md:ml-40 block uppercase">Services</span>
         </h2>
+        <p className="mt-10">
+          At YEE STUDIO, we believe in crafting digital experiences that are as
+          unique as your brand. From web design and development to branding and
+          digital marketing, our services are tailored to fit your exact needs.
+        </p>
+        <p>
+          Choose the full suite or select precisely what your business requires.
+          Ready for a flexible, tailored approach to your online presence?
+          Explore our services and discover how we can elevate your brand today.
+        </p>
       </div>
 
-      <div ref={container} className="flex flex-col gap-20 items-stretch py-16">
+      <div
+        ref={container}
+        className="flex flex-col gap-8 lg:gap-20 items-stretch py-8 lg:py-16"
+      >
         {cards.map((card, i) => {
           const targetScale = 1 - (cards.length - i) * 0.05;
           return (
@@ -78,9 +92,9 @@ const VerticalSlideSection = (props: Props) => {
             />
           );
         })}
-        <div className="h-[50vh] flex items-center justify-center sticky top-0"></div>
+        <div className="h-[50vh] hidden lg:flex items-center justify-center sticky top-0"></div>
       </div>
-    </>
+    </section>
   );
 };
 
@@ -101,6 +115,7 @@ const Card = ({
   opacityRange: number[];
   targetScale: number;
 } & Card) => {
+  const { width = 0, height = 0 } = useWindowSize();
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
@@ -115,22 +130,21 @@ const Card = ({
   return (
     <div
       ref={container}
-      className="h-screen flex items-center justify-center sticky top-0 container"
+      className="lg:h-screen flex items-center justify-center lg:sticky top-0 container"
       // style={{ top: `${index * 20}px` }}
     >
       <motion.div
         style={{
-          scale: index === cards.length - 1 ? "1" : scale,
+          scale:
+            width > 1024 ? (index === cards.length - 1 ? "1" : scale) : "1",
           // opacity: index === cards.length - 1 ? "100" : opacity,
         }}
-        className={`relative  w-full h-[700px] md:h-[600px] bg-white text-black rounded-lg p-10 md:p-20 border border-border  shadow-[0px_10px_60px_20px_rgba(255,255,255,.2)]`}
+        className={`relative  w-full h-2/3 md:h-[600px] bg-white text-black rounded-lg p-0 md:p-20 overflow-hidden`}
       >
-        <div className="flex flex-col md:flex-row items-stretch md:items-center gap-10 h-full">
-          <div className="order-2 md:order-1 basis-1/2 space-y-6">
-            <h3 className="text-6xl font-semibold whitespace-pre-line">
-              {title}
-            </h3>
-            <p className="text-lg font-medium">{description}</p>
+        <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4 md:gap-10 h-full">
+          <div className="px-6 pb-6 lg:px-0 order-2 md:order-1 space-y-4 md:space-y-6">
+            <h3>{title}</h3>
+            <p>{description}</p>
             <Button
               variant={"outline"}
               className="bg-tranparent border-black border-2"
@@ -138,9 +152,10 @@ const Card = ({
               Find out more
             </Button>
           </div>
-          <div className="order-1 md:order-2 basis-1/2 overflow-hidden aspect-square rounded-lg">
+          <div className="order-1 md:order-2 overflow-hidden aspect-video lg:aspect-square">
             <motion.div
-            //  style={{ scale: imgScale }}
+              //  style={{ scale: imgScale }}
+              className=""
             >
               <video
                 src={asset}

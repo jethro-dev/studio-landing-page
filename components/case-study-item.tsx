@@ -19,14 +19,14 @@ export const CaseStudyItem = ({
   return (
     <article
       className={cn(
-        "flex flex-col items-start font-sans row-span-1 border border-white/[0.2] rounded-lg overflow-hidden",
-        index === 0 && "col-span-2 row-span-2"
+        "flex flex-col items-start font-sans row-span-1 border border-white/[0.2] rounded overflow-hidden",
+        index === 0 && "lg:col-span-2 row-span-2"
       )}
     >
-      <div className="bg-black px-8 py-4">
-        <h3 className="font-medium font-montserrat">{name}</h3>
+      <div className="bg-black py-2 px-6 lg:px-8 lg:py-4">
+        <h6>{name}</h6>
       </div>
-      <div className="group relative w-full rounded-lg overflow-hidden">
+      <div className="group relative w-full rounded overflow-hidden">
         <Link href="/case-study/1">
           <Image
             src={image}
