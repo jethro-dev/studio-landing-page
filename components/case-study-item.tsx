@@ -20,7 +20,7 @@ export const CaseStudyItem = ({
     <article
       className={cn(
         "flex flex-col items-start font-sans row-span-1 border border-white/[0.2] rounded-[8px] overflow-hidden",
-        index === 0 && "lg:col-span-2 row-span-2"
+        index === 0 && "md:col-span-2 md:row-span-2"
       )}
     >
       <div className="bg-black py-2 px-4 lg:px-8 lg:py-4">

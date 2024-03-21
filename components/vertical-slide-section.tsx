@@ -132,7 +132,7 @@ const Card = ({
   return (
     <div
       ref={container}
-      className="md:h-screen flex items-center justify-center md:sticky top-0 container"
+      className="md:h-screen flex items-center justify-center md:sticky top-0 container max-w-5xl"
       // style={{ top: `${index * 20}px` }}
     >
       <motion.div
@@ -140,10 +140,10 @@ const Card = ({
           scale: width > 768 ? (index === cards.length - 1 ? "1" : scale) : "1",
           // opacity: index === cards.length - 1 ? "100" : opacity,
         }}
-        className="relative  w-full h-2/3 md:h-[600px] bg-black border border-neutral-700 shadow-2xl shadow-neutral-700/20 rounded-lg overflow-hidden flex items-stretch"
+        className="relative w-full h-2/3 md:h-1/2 md:min-h-[500px] bg-black border border-neutral-700 shadow-2xl shadow-neutral-700/20 rounded-lg overflow-hidden flex items-stretch flex-col md:flex-row"
       >
-        <div className="basis-1/2 px-12 flex flex-col justify-center items-start gap-6">
-          <h3>{title}</h3>
+        <div className="order-2 md:order-1 basis-1/2 py-8 lg:py-12 px-8 lg:px-12 flex flex-col justify-center items-start gap-6">
+          <h3 className="text-3xl uppercase">{title}</h3>
           <p>{description}</p>
           <Button
             // variant={"outline"}
@@ -152,8 +152,8 @@ const Card = ({
             Find out more
           </Button>
         </div>
-        <div className="basis-1/2 relative">
-          <div className="bg-gradient-to-r from-black to-transparent absolute left-0 top-0 bottom-0 w-full -translate-x-[1px]"></div>
+        <div className="order-1 md:order-2 h-[250px] md:h-auto md:basis-1/2 relative">
+          <div className="bg-gradient-to-t md:bg-gradient-to-r from-black to-transparent absolute left-0 top-0 bottom-0 w-full md:-translate-x-[1px]"></div>
           <video
             src={asset}
             playsInline

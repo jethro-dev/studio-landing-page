@@ -16,11 +16,11 @@ export const HeaderSection = ({}: Props) => {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black"></div>
       <MeshDemo />
 
-      <div className="py-24 md:py-0 container max-w-8xl absolute inset-0 grid grid-cols-1 md:grid-cols-12 md:grid-rows-2 gap-10 z-10 font-montserrat">
+      <div className="py-24 md:py-0 container absolute inset-0 grid grid-cols-1 md:grid-cols-12 md:grid-rows-2 gap-10 z-10 font-montserrat">
         <div className="col-span-1 md:col-span-8 row-span-2 flex items-center justify-start">
           <h1 className="uppercase space-y-2 md:space-y-6">
             {/* <p className="font-neutralFace">Full - Cycle</p> */}
-            <span className="block">Full-Cycle</span>
+            <span className="block text-nowrap">Full-Cycle</span>
             <span className="block">Web</span>
             <span className="block">Agency</span>
           </h1>

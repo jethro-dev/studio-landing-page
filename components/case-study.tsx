@@ -12,11 +12,13 @@ const CaseStudy = (props: Props) => {
     <section className="mt-16 relative">
       <div className="mx-auto container pb-16 md:pb-28">
         <div className="md:mt-40 flex flex-col md:flex-row justify-between gap-10">
-          <h2 className="order-2 md:order-1 md:mt-40 md:w-1/2">
-            <span className="block uppercase">Our</span>
-            <span className="block uppercase">Work</span>
-          </h2>
-          <div className="order-1 md:order-2 md:w-1/2 space-y-3 lg:space-y-6">
+          <div className="order-2 md:order-1 md:basis-1/2 flex items-center">
+            <h2>
+              <span className="block uppercase">Our</span>
+              <span className="block uppercase">Work</span>
+            </h2>
+          </div>
+          <div className="order-1 md:order-2 md:basis-1/2 space-y-3 lg:space-y-6">
             <h3 className="text-3xl font-medium">
               Making brands a damn site better.
             </h3>
@@ -29,7 +31,7 @@ const CaseStudy = (props: Props) => {
           </div>
         </div>
 
-        <div className="mx-auto mt-8 lg:mt-16 grid max-w-2xl grid-cols-1 gap-y-6 lg:gap-y-20 gap-x-8 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+        <div className="mx-auto mt-8 lg:mt-16 grid grid-cols-1 gap-y-6 lg:gap-y-20 gap-x-8 md:grid-cols-2">
           {projects.map((item, i) => (
             <CaseStudyItem key={i} {...item} index={i} />
           ))}

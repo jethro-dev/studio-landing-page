@@ -35,8 +35,8 @@ const socials = [
 
 export const Footer = (props: Props) => {
   return (
-    <footer className="bg-black text-white ring-1">
-      <div className="container mx-auto px-4 text-left pt-8 pb-8">
+    <footer className="bg-black text-white">
+      <div className="container text-left pt-8 pb-8">
         <h2 className="text-2xl md:text-3xl lg:text-4xl">
           Let’s Create Something Better Together
         </h2>
@@ -58,7 +58,7 @@ export const Footer = (props: Props) => {
 
         <div className="grid grid-col-1 md:grid-cols-3 gap-8 lg:gap-16 font-workSans">
           <div className="max-w-lg">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl">YEE STUDIO</h2>
+            <h2 className="text-2xl md:text-3xl lg:text-6xl">YEE STUDIO</h2>
             <p className="mt-2 lg:mt-6">Transform visions into reality.</p>
           </div>
 
