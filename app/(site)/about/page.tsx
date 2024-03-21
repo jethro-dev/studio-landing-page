@@ -9,10 +9,6 @@ type Props = {};
 const AboutPage = (props: Props) => {
   return (
     <main>
-      <HeaderSection
-        title={`About\nTeam / Office`}
-        description="We design and code user-centric digital products for enterprises and startups."
-      />
       <section className="bg-black/50 aspect-video">
         <video
           src="https://www.dstudio.digital/video/bubble-bg.mp4"

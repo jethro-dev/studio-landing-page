@@ -44,11 +44,11 @@ const process = [
 
 const OurProcess = (props: Props) => {
   return (
-    <section className="mt-20">
+    <section className="mt-16">
       <div className="container">
         <h2 className="space-y-2">
           <span className="block">Start a project with</span>
-          <span className="block uppercase font-bold">Yee Studio</span>
+          <span className="block uppercase font-semibold">Yee Studio</span>
         </h2>
       </div>
 
@@ -64,17 +64,13 @@ const OurProcess = (props: Props) => {
               <div
                 className={`w-full max-w-lg shadow-2xl shadow-emerald-500/[0.2] py-12 px-8 lg:py-16 lg:px-12 rounded-lg basis-1/2 space-y-3 lg:space-y-6`}
               >
-                <span className="font-bold text-lg lg:text-8xl font-montserrat">
+                <span className="font-bold text-3xl lg:text-8xl font-montserrat">
                   {String(i + 1).padStart(2, "0")}.
                 </span>
 
-                <h3 className="text-2xl font-bold">{item.title}</h3>
-                <h4 className="font-medium font-montserrat text-lg lg:text-3xl">
-                  {item.subHeading}
-                </h4>
-                <p className="bg-clip-text bg-gradient-to-b from-white to-white/50 text-transparent">
-                  {item.description}
-                </p>
+                <h3 className="text-3xl">{item.title}</h3>
+                <h4 className="text-base">{item.subHeading}</h4>
+                <p>{item.description}</p>
               </div>
             </MovingBorder>
             {/* <div

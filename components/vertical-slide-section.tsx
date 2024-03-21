@@ -16,7 +16,7 @@ type Card = {
 
 const cards = [
   {
-    title: `Web\n design`,
+    title: `WEB DESIGN`,
     description:
       "Crafting visually stunning and user-friendly websites that captivate your audience and enhance your digital presence.",
     asset: "https://kota-content.b-cdn.net/app/uploads/2024/02/homepage.mp4",
@@ -53,13 +53,15 @@ const VerticalSlideSection = (props: Props) => {
   });
 
   return (
-    <section className="mt-20">
-      <div className="container flex flex-col md:flex-row justify-between gap-4">
-        <h2 className="md:mt-80 md:w-1/2">
-          <span className="block uppercase">Our</span>
-          <span className="ml-6 md:ml-40 block uppercase">Services</span>
-        </h2>
-        <p className="mt-10">
+    <section className="mt-16">
+      <div className="container flex flex-col md:flex-row justify-between gap-4 md:gap-8">
+        <div className="flex items-center">
+          <h2 className="md:w-1/2">
+            <span className="block uppercase">Our</span>
+            <span className="block uppercase">Services</span>
+          </h2>
+        </div>
+        <p>
           At YEE STUDIO, we believe in crafting digital experiences that are as
           unique as your brand. From web design and development to branding and
           digital marketing, our services are tailored to fit your exact needs.
@@ -73,7 +75,7 @@ const VerticalSlideSection = (props: Props) => {
 
       <div
         ref={container}
-        className="flex flex-col gap-8 lg:gap-20 items-stretch py-8 lg:py-16"
+        className="mt-6 md:-mt-40 flex flex-col gap-8 lg:gap-20 items-stretch py-8 lg:py-16"
       >
         {cards.map((card, i) => {
           const targetScale = 1 - (cards.length - i) * 0.05;
@@ -130,44 +132,37 @@ const Card = ({
   return (
     <div
       ref={container}
-      className="lg:h-screen flex items-center justify-center lg:sticky top-0 container"
+      className="md:h-screen flex items-center justify-center md:sticky top-0 container"
       // style={{ top: `${index * 20}px` }}
     >
       <motion.div
         style={{
-          scale:
-            width > 1024 ? (index === cards.length - 1 ? "1" : scale) : "1",
+          scale: width > 768 ? (index === cards.length - 1 ? "1" : scale) : "1",
           // opacity: index === cards.length - 1 ? "100" : opacity,
         }}
-        className={`relative  w-full h-2/3 md:h-[600px] bg-white text-black rounded-lg p-0 md:p-20 overflow-hidden`}
+        className="relative  w-full h-2/3 md:h-[600px] bg-black border border-neutral-700 shadow-2xl shadow-neutral-700/20 rounded-lg overflow-hidden flex items-stretch"
       >
-        <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4 md:gap-10 h-full">
-          <div className="px-6 pb-6 lg:px-0 order-2 md:order-1 space-y-4 md:space-y-6">
-            <h3>{title}</h3>
-            <p>{description}</p>
-            <Button
-              variant={"outline"}
-              className="bg-tranparent border-black border-2"
-            >
-              Find out more
-            </Button>
-          </div>
-          <div className="order-1 md:order-2 overflow-hidden aspect-video lg:aspect-square">
-            <motion.div
-              //  style={{ scale: imgScale }}
-              className=""
-            >
-              <video
-                src={asset}
-                playsInline
-                muted
-                loop
-                autoPlay
-                preload="auto"
-                className="object-cover object-bottom"
-              />
-            </motion.div>
-          </div>
+        <div className="basis-1/2 px-12 flex flex-col justify-center items-start gap-6">
+          <h3>{title}</h3>
+          <p>{description}</p>
+          <Button
+            // variant={"outline"}
+            className="bg-white text-black border-2 font-semibold"
+          >
+            Find out more
+          </Button>
+        </div>
+        <div className="basis-1/2 relative">
+          <div className="bg-gradient-to-r from-black to-transparent absolute left-0 top-0 bottom-0 w-full -translate-x-[1px]"></div>
+          <video
+            src={asset}
+            playsInline
+            muted
+            loop
+            autoPlay
+            preload="auto"
+            className="w-full h-full object-cover"
+          />
         </div>
       </motion.div>
     </div>

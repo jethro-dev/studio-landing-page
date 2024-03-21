@@ -88,7 +88,7 @@
     @apply font-montserrat font-semibold text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl;
   }
   h2 {
-    @apply font-montserrat font-medium text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl;
+    @apply font-montserrat font-semibold text-5xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl;
   }
   h3 {
     @apply font-montserrat font-semibold text-xl sm:text-4xl lg:text-5xl md:whitespace-pre-line;

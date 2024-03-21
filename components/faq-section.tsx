@@ -28,7 +28,7 @@ const questions = [
 
 const FaqSection = (props: Props) => {
   return (
-    <section className="relative pb-16 pt-16">
+    <section className="relative pb-16">
       <div className="container max-w-7xl">
         <h2 className="text-center text-2xl md:text-4xl lg:text-5xl">
           Frequently Asked Questions

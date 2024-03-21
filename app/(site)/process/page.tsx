@@ -10,10 +10,6 @@ type Props = {};
 const ProcessPage = (props: Props) => {
   return (
     <main>
-      <HeaderSection
-        title={`Our Design\nProcess`}
-        description="We are excited to take on your new project and help you build something amazing!"
-      />
       <section className="container mx-auto px-4">
         <div className="relative pb-[175px]">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16">

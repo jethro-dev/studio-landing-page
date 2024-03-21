@@ -17,12 +17,9 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main>
-      <HeaderSection
-        title={`Full-Cycle\n Development\nAgency`}
-        description="We specialise in delivering ready-to-use websites, mobile applications, and comprehensive online business services."
-      />
+      <HeaderSection />
 
-      <div className="py-16 bg-white">
+      <div className="py-8 md:py-12 lg:py-16 bg-white">
         <LogoCarousel />
       </div>
 

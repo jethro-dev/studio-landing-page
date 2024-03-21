@@ -7,14 +7,11 @@ import { Button } from "./ui/button";
 import Spline from "@splinetool/react-spline";
 import { SplineDemo } from "./spline-demo";
 
-type Props = {
-  title: string;
-  description: string;
-};
+type Props = {};
 
-export const HeaderSection = ({ title, description }: Props) => {
+export const HeaderSection = ({}: Props) => {
   return (
-    <section className="relative h-screen max-h-[1000px] py-10 md:py-20 flex flex-col justify-center text-white">
+    <section className="relative h-screen max-h-[1500px] py-10 md:py-20 flex flex-col justify-center text-white">
       <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0)_0%,rgba(0,0,0,.8)_100%)]"></div>
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black"></div>
       <MeshDemo />
@@ -39,7 +36,8 @@ export const HeaderSection = ({ title, description }: Props) => {
         <div className="col-span-1 md:col-span-4 flex items-start md:items-center justify-end ">
           <div className="max-w-sm">
             <p className=" text-right font-medium font-montserrat text-lg">
-              {description}
+              We specialise in delivering ready-to-use websites, mobile
+              applications, and comprehensive online business services.
             </p>
           </div>
         </div>
