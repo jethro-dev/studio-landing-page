@@ -100,7 +100,7 @@ export const Footer = (props: Props) => {
 
         <div className="grid grid-cols-1 font-sans md:grid-cols-2 mt-12 md:mt-20 gap-4 lg:gap-10">
           <div className="text-sm">
-            <a href="/about" className="mr-7 hover:text-yellow-300">
+            {/* <a href="/about" className="mr-7 hover:text-yellow-300">
               About Us
             </a>
             <a href="case-study" className="mr-7  hover:text-yellow-300">
@@ -108,7 +108,7 @@ export const Footer = (props: Props) => {
             </a>
             <a href="contact" className="mr-7  hover:text-yellow-300">
               Contact
-            </a>
+            </a> */}
           </div>
           <div className="text-sm text-left md:text-right">
             &copy; 2024 YEE STUDIO. All Rights Reserved.

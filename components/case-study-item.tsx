@@ -27,15 +27,13 @@ export const CaseStudyItem = ({
         <h6>{name}</h6>
       </div>
       <div className="group relative w-full rounded-[8px] overflow-hidden">
-        <Link href="/case-study/1">
-          <Image
-            src={image}
-            alt={name}
-            width={1600}
-            height={900}
-            className="aspect-video"
-          />
-        </Link>
+        <Image
+          src={image}
+          alt={name}
+          width={1600}
+          height={900}
+          className="aspect-video"
+        />
         <div className="pointer-events-none opacity-0 group-hover:opacity-100 bg-black/50 absolute inset-0 flex items-center px-10 py-10 transition-opacity">
           <div>
             <p>{title}</p>

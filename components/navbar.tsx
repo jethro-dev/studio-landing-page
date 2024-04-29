@@ -38,14 +38,14 @@ export const Navbar = ({ promo = true }: Props) => {
             </span>
           </Link>
           <div className="flex md:order-2 items-center relative">
-            {/* <Button
-              className="px-6 py-3 h-auto font-workSans text-base font-normal"
+            <Button
+              className="bg-white px-6 py-3 h-auto text-base font-medium text-black hover:bg-neutral-300"
               asChild
             >
               <Link href="/contact">Get Quote</Link>
-            </Button> */}
+            </Button>
 
-            <Menu />
+            {/* <Menu /> */}
           </div>
           {/* <div className="hidden items-center justify-between w-full lg:flex lg:w-auto md:order-2 lg:order-1">
             <ul className="flex flex-col lg:flex-row  gap-8 ">
